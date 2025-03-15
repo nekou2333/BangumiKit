@@ -21,7 +21,7 @@ extension Paths {
         ///   "medium" : "https:\/\/lain.bgm.tv\/pic\/user\/m\/000\/00\/00\/1.jpg?r=1391790456",
         ///   "small" : "https:\/\/lain.bgm.tv\/pic\/user\/s\/000\/00\/00\/1.jpg?r=1391790456"
         /// }
-        public var avatar: JellyfinAPI.Avatar
+        public var avatar: BangumiKit.Avatar
         public var id: Int
         public var nickname: String
         /// 个人签名
@@ -35,7 +35,7 @@ extension Paths {
         /// 用户设置的时区偏移，以小时为单位。比如 GMT+8（shanghai/beijing）为 8
         public var timeOffset: Int?
 
-        public init(avatar: JellyfinAPI.Avatar, id: Int, nickname: String, sign: String, userGroup: Int, username: String, email: AnyJSON, regTime: AnyJSON, timeOffset: Int? = nil) {
+        public init(avatar: BangumiKit.Avatar, id: Int, nickname: String, sign: String, userGroup: Int, username: String, email: AnyJSON, regTime: AnyJSON, timeOffset: Int? = nil) {
             self.avatar = avatar
             self.id = id
             self.nickname = nickname
@@ -49,7 +49,7 @@ extension Paths {
 
         public init(from decoder: Decoder) throws {
             let values = try decoder.container(keyedBy: StringCodingKey.self)
-            self.avatar = try values.decode(JellyfinAPI.Avatar.self, forKey: "avatar")
+            self.avatar = try values.decode(BangumiKit.Avatar.self, forKey: "avatar")
             self.id = try values.decode(Int.self, forKey: "id")
             self.nickname = try values.decode(String.self, forKey: "nickname")
             self.sign = try values.decode(String.self, forKey: "sign")

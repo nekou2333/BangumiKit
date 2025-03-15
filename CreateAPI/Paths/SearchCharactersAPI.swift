@@ -12,7 +12,7 @@ extension Paths {
     /// 
     /// 目前支持的筛选条件包括:
     /// - `nsfw`: 使用 `include` 包含NSFW搜索结果。默认排除搜索NSFW条目。无权限情况下忽略此选项，不会返回NSFW条目。
-    static public func searchCharacters(limit: Int? = nil, offset: Int? = nil, _ body: SearchCharactersRequest? = nil) -> Request<JellyfinAPI.PagedCharacter> {
+    static public func searchCharacters(limit: Int? = nil, offset: Int? = nil, _ body: SearchCharactersRequest? = nil) -> Request<BangumiKit.PagedCharacter> {
         Request(path: "/v0/search/characters", method: "POST", query: makeSearchCharactersQuery(limit, offset), body: body, id: "searchCharacters")
     }
 

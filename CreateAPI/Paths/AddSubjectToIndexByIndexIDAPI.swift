@@ -7,7 +7,7 @@ import URLQueryEncoder
 
 extension Paths {
     /// Add a subject to Index
-    static public func addSubjectToIndexByIndexID(indexID: Int, _ body: JellyfinAPI.IndexSubjectAddInfo? = nil) -> Request<Void> {
+    static public func addSubjectToIndexByIndexID(indexID: Int, _ body: BangumiKit.IndexSubjectAddInfo? = nil) -> Request<Void> {
         Request(path: "/v0/indices/\(indexID)/subjects", method: "POST", body: body, id: "addSubjectToIndexByIndexId")
     }
 }

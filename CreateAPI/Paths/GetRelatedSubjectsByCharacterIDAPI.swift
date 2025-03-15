@@ -7,7 +7,7 @@ import URLQueryEncoder
 
 extension Paths {
     /// Get character related subjects
-    static public func getRelatedSubjectsByCharacterID(characterID: Int) -> Request<[JellyfinAPI.V0RelatedSubject]> {
+    static public func getRelatedSubjectsByCharacterID(characterID: Int) -> Request<[BangumiKit.V0RelatedSubject]> {
         Request(path: "/v0/characters/\(characterID)/subjects", method: "GET", id: "getRelatedSubjectsByCharacterId")
     }
 }

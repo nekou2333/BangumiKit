@@ -18,54 +18,54 @@ extension Paths {
 
         public struct A: Decodable, Hashable {
             /// 结果列表
-            public var list: [JellyfinAPI.LegacySubjectSmall]?
+            public var list: [BangumiKit.LegacySubjectSmall]?
             /// 总条数
             public var results: Int?
 
-            public init(list: [JellyfinAPI.LegacySubjectSmall]? = nil, results: Int? = nil) {
+            public init(list: [BangumiKit.LegacySubjectSmall]? = nil, results: Int? = nil) {
                 self.list = list
                 self.results = results
             }
 
             public init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: StringCodingKey.self)
-                self.list = try values.decodeIfPresent([JellyfinAPI.LegacySubjectSmall].self, forKey: "list")
+                self.list = try values.decodeIfPresent([BangumiKit.LegacySubjectSmall].self, forKey: "list")
                 self.results = try values.decodeIfPresent(Int.self, forKey: "results")
             }
         }
 
         public struct B: Decodable, Hashable {
             /// 结果列表
-            public var list: [JellyfinAPI.LegacySubjectMedium]?
+            public var list: [BangumiKit.LegacySubjectMedium]?
             /// 总条数
             public var results: Int?
 
-            public init(list: [JellyfinAPI.LegacySubjectMedium]? = nil, results: Int? = nil) {
+            public init(list: [BangumiKit.LegacySubjectMedium]? = nil, results: Int? = nil) {
                 self.list = list
                 self.results = results
             }
 
             public init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: StringCodingKey.self)
-                self.list = try values.decodeIfPresent([JellyfinAPI.LegacySubjectMedium].self, forKey: "list")
+                self.list = try values.decodeIfPresent([BangumiKit.LegacySubjectMedium].self, forKey: "list")
                 self.results = try values.decodeIfPresent(Int.self, forKey: "results")
             }
         }
 
         public struct C: Decodable, Hashable {
             /// 结果列表
-            public var list: [JellyfinAPI.LegacySubjectLarge]?
+            public var list: [BangumiKit.LegacySubjectLarge]?
             /// 总条数
             public var results: Int?
 
-            public init(list: [JellyfinAPI.LegacySubjectLarge]? = nil, results: Int? = nil) {
+            public init(list: [BangumiKit.LegacySubjectLarge]? = nil, results: Int? = nil) {
                 self.list = list
                 self.results = results
             }
 
             public init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: StringCodingKey.self)
-                self.list = try values.decodeIfPresent([JellyfinAPI.LegacySubjectLarge].self, forKey: "list")
+                self.list = try values.decodeIfPresent([BangumiKit.LegacySubjectLarge].self, forKey: "list")
                 self.results = try values.decodeIfPresent(Int.self, forKey: "results")
             }
         }

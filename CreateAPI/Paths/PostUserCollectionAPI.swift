@@ -13,7 +13,7 @@ extension Paths {
     /// 由于直接修改剧集条目的完成度可能会引起意料之外效果，只能用于修改书籍类条目的完成度。
     /// 
     /// 方法的所有请求体字段均可选
-    static public func postUserCollection(subjectID: Int, _ body: JellyfinAPI.UserSubjectCollectionModifyPayload? = nil) -> Request<Void> {
+    static public func postUserCollection(subjectID: Int, _ body: BangumiKit.UserSubjectCollectionModifyPayload? = nil) -> Request<Void> {
         Request(path: "/v0/users/-/collections/\(subjectID)", method: "POST", body: body, id: "postUserCollection")
     }
 }

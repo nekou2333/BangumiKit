@@ -7,7 +7,7 @@ import URLQueryEncoder
 
 extension Paths {
     /// Create a new index
-    static public var newIndex: Request<JellyfinAPI.Index> {
+    static public var newIndex: Request<BangumiKit.Index> {
         Request(path: "/v0/indices", method: "POST", id: "newIndex")
     }
 }

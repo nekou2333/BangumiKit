@@ -19,7 +19,7 @@ extension Paths {
     /// - `nsfw`: 使用 `include` 包含NSFW搜索结果。默认排除搜索NSFW条目。无权限情况下忽略此选项，不会返回NSFW条目。
     /// 
     /// 不同筛选条件之间为 `且`
-    static public func searchSubjects(limit: Int? = nil, offset: Int? = nil, _ body: SearchSubjectsRequest? = nil) -> Request<JellyfinAPI.PagedSubject> {
+    static public func searchSubjects(limit: Int? = nil, offset: Int? = nil, _ body: SearchSubjectsRequest? = nil) -> Request<BangumiKit.PagedSubject> {
         Request(path: "/v0/search/subjects", method: "POST", query: makeSearchSubjectsQuery(limit, offset), body: body, id: "searchSubjects")
     }
 

@@ -15,9 +15,9 @@ extension Paths {
         public var limit: Int
         public var offset: Int
         public var total: Int
-        public var data: [JellyfinAPI.UserEpisodeCollection]?
+        public var data: [BangumiKit.UserEpisodeCollection]?
 
-        public init(limit: Int, offset: Int, total: Int, data: [JellyfinAPI.UserEpisodeCollection]? = nil) {
+        public init(limit: Int, offset: Int, total: Int, data: [BangumiKit.UserEpisodeCollection]? = nil) {
             self.limit = limit
             self.offset = offset
             self.total = total
@@ -29,7 +29,7 @@ extension Paths {
             self.limit = try values.decode(Int.self, forKey: "limit")
             self.offset = try values.decode(Int.self, forKey: "offset")
             self.total = try values.decode(Int.self, forKey: "total")
-            self.data = try values.decodeIfPresent([JellyfinAPI.UserEpisodeCollection].self, forKey: "data")
+            self.data = try values.decodeIfPresent([BangumiKit.UserEpisodeCollection].self, forKey: "data")
         }
     }
 

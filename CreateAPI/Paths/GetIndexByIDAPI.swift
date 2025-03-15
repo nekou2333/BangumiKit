@@ -7,7 +7,7 @@ import URLQueryEncoder
 
 extension Paths {
     /// Get Index By ID
-    static public func getIndexByID(indexID: Int) -> Request<JellyfinAPI.Index> {
+    static public func getIndexByID(indexID: Int) -> Request<BangumiKit.Index> {
         Request(path: "/v0/indices/\(indexID)", method: "GET", id: "getIndexById")
     }
 }

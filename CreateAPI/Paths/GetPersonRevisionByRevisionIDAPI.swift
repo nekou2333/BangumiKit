@@ -7,7 +7,7 @@ import URLQueryEncoder
 
 extension Paths {
     /// Get Person Revision
-    static public func getPersonRevisionByRevisionID(revisionID: Int) -> Request<JellyfinAPI.PersonRevision> {
+    static public func getPersonRevisionByRevisionID(revisionID: Int) -> Request<BangumiKit.PersonRevision> {
         Request(path: "/v0/revisions/persons/\(revisionID)", method: "GET", id: "getPersonRevisionByRevisionId")
     }
 }

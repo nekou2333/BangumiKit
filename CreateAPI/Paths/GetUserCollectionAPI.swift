@@ -9,7 +9,7 @@ extension Paths {
     /// 获取用户单个条目收藏
     ///
     /// 获取对应用户的收藏，查看私有收藏需要 access token
-    static public func getUserCollection(username: String, subjectID: Int) -> Request<JellyfinAPI.UserSubjectCollection> {
+    static public func getUserCollection(username: String, subjectID: Int) -> Request<BangumiKit.UserSubjectCollection> {
         Request(path: "/v0/users/\(username)/collections/\(subjectID)", method: "GET", id: "getUserCollection")
     }
 }

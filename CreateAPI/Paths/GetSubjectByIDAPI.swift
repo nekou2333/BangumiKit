@@ -9,7 +9,7 @@ extension Paths {
     /// 获取条目
     ///
     /// Cache with 300s
-    static public func getSubjectByID(subjectID: Int) -> Request<JellyfinAPI.Subject> {
+    static public func getSubjectByID(subjectID: Int) -> Request<BangumiKit.Subject> {
         Request(path: "/v0/subjects/\(subjectID)", method: "GET", id: "getSubjectById")
     }
 }

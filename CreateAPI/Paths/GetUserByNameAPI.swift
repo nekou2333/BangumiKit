@@ -9,7 +9,7 @@ extension Paths {
     /// Get User by name
     ///
     /// 获取用户信息
-    static public func getUserByName(username: String) -> Request<JellyfinAPI.User> {
+    static public func getUserByName(username: String) -> Request<BangumiKit.User> {
         Request(path: "/v0/users/\(username)", method: "GET", id: "getUserByName")
     }
 }

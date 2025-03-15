@@ -14,7 +14,7 @@ extension Paths {
     /// - `career`: 职业，可以多次出现。`且` 关系。
     /// 
     /// 不同筛选条件之间为 `且`
-    static public func searchPersons(limit: Int? = nil, offset: Int? = nil, _ body: SearchPersonsRequest? = nil) -> Request<JellyfinAPI.PagedPerson> {
+    static public func searchPersons(limit: Int? = nil, offset: Int? = nil, _ body: SearchPersonsRequest? = nil) -> Request<BangumiKit.PagedPerson> {
         Request(path: "/v0/search/persons", method: "POST", query: makeSearchPersonsQuery(limit, offset), body: body, id: "searchPersons")
     }
 

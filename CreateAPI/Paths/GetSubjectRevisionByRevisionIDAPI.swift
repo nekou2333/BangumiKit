@@ -7,7 +7,7 @@ import URLQueryEncoder
 
 extension Paths {
     /// Get Subject Revision
-    static public func getSubjectRevisionByRevisionID(revisionID: Int) -> Request<JellyfinAPI.SubjectRevision> {
+    static public func getSubjectRevisionByRevisionID(revisionID: Int) -> Request<BangumiKit.SubjectRevision> {
         Request(path: "/v0/revisions/subjects/\(revisionID)", method: "GET", id: "getSubjectRevisionByRevisionId")
     }
 }

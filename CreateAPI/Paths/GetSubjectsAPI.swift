@@ -9,7 +9,7 @@ extension Paths {
     /// 浏览条目
     ///
     /// 第一页会 cache 24h，之后会 cache 1h
-    static public func getSubjects(parameters: GetSubjectsParameters) -> Request<JellyfinAPI.PagedSubject> {
+    static public func getSubjects(parameters: GetSubjectsParameters) -> Request<BangumiKit.PagedSubject> {
         Request(path: "/v0/subjects", method: "GET", query: parameters.asQuery, id: "getSubjects")
     }
 

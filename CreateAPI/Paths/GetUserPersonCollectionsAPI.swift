@@ -7,7 +7,7 @@ import URLQueryEncoder
 
 extension Paths {
     /// 获取用户人物收藏列表
-    static public func getUserPersonCollections(username: String) -> Request<JellyfinAPI.PagedUserPersonCollection> {
+    static public func getUserPersonCollections(username: String) -> Request<BangumiKit.PagedUserPersonCollection> {
         Request(path: "/v0/users/\(username)/collections/-/persons", method: "GET", id: "getUserPersonCollections")
     }
 }

@@ -12,7 +12,7 @@ extension Paths {
     }
 
     public struct GetCalendarResponseItem: Decodable, Hashable {
-        public var items: [JellyfinAPI.LegacySubjectSmall]?
+        public var items: [BangumiKit.LegacySubjectSmall]?
         public var weekday: Weekday?
 
         public struct Weekday: Decodable, Hashable, Identifiable {
@@ -40,14 +40,14 @@ extension Paths {
             }
         }
 
-        public init(items: [JellyfinAPI.LegacySubjectSmall]? = nil, weekday: Weekday? = nil) {
+        public init(items: [BangumiKit.LegacySubjectSmall]? = nil, weekday: Weekday? = nil) {
             self.items = items
             self.weekday = weekday
         }
 
         public init(from decoder: Decoder) throws {
             let values = try decoder.container(keyedBy: StringCodingKey.self)
-            self.items = try values.decodeIfPresent([JellyfinAPI.LegacySubjectSmall].self, forKey: "items")
+            self.items = try values.decodeIfPresent([BangumiKit.LegacySubjectSmall].self, forKey: "items")
             self.weekday = try values.decodeIfPresent(Weekday.self, forKey: "weekday")
         }
     }

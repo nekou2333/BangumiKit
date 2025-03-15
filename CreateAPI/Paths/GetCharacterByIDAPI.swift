@@ -9,7 +9,7 @@ extension Paths {
     /// Get Character Detail
     ///
     /// Cache with 60s
-    static public func getCharacterByID(characterID: Int) -> Request<JellyfinAPI.Character> {
+    static public func getCharacterByID(characterID: Int) -> Request<BangumiKit.Character> {
         Request(path: "/v0/characters/\(characterID)", method: "GET", id: "getCharacterById")
     }
 }

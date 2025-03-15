@@ -7,7 +7,7 @@ import URLQueryEncoder
 
 extension Paths {
     /// Get Episode
-    static public func getEpisodeByID(episodeID: Int) -> Request<JellyfinAPI.EpisodeDetail> {
+    static public func getEpisodeByID(episodeID: Int) -> Request<BangumiKit.EpisodeDetail> {
         Request(path: "/v0/episodes/\(episodeID)", method: "GET", id: "getEpisodeById")
     }
 }

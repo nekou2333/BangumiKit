@@ -1,4 +1,4 @@
-module: JellyfinAPI
+module: BangumiKit
 generate:
 - entities
 - paths

@@ -7,7 +7,7 @@ import URLQueryEncoder
 
 extension Paths {
     /// Get Episode Revisions
-    static public func getEpisodeRevisions(parameters: GetEpisodeRevisionsParameters) -> Request<JellyfinAPI.PagedRevision> {
+    static public func getEpisodeRevisions(parameters: GetEpisodeRevisionsParameters) -> Request<BangumiKit.PagedRevision> {
         Request(path: "/v0/revisions/episodes", method: "GET", query: parameters.asQuery, id: "getEpisodeRevisions")
     }
 
