@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.6
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -14,9 +14,36 @@ let package = Package(
         .package(url: "https://github.com/CreateAPI/URLQueryEncoder", from: "0.2.0"),
     ],
     targets: [
-        .target(name: "BangumiKit", dependencies: [
-            .product(name: "Get", package: "Get"),
-            .product(name: "URLQueryEncoder", package: "URLQueryEncoder"),
-        ], path: "Sources"),
+        .target(
+            name: "BangumiKit",
+            dependencies: [
+                .product(name: "Get", package: "Get"),
+                .product(name: "URLQueryEncoder", package: "URLQueryEncoder"),
+            ],
+            path: "Sources",
+            exclude: [
+                "bangumi-openapi.json",
+            ]
+        ),
+        .binaryTarget(
+            name: "create-api",
+            url: "https://github.com/CreateAPI/CreateAPI/releases/download/0.2.0/create-api.artifactbundle.zip",
+            checksum: "6f8a3ce099f07eb2655ccaf6f66d8c9a09b74bb2307781c4adec36609ddac009"
+        ),
+        .plugin(
+            name: "CreateAPI",
+            capability: .command(
+                intent: .custom(
+                    verb: "generate-api",
+                    description: "Generates the OpenAPI entities and paths using CreateAPI"
+                ),
+                permissions: [
+                    .writeToPackageDirectory(reason: "To output the generated source code"),
+                ]
+            ),
+            dependencies: [
+                .target(name: "create-api"),
+            ]
+        ),
     ]
 )
